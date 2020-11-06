@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grievance Readdressal Form</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script>
+      function vallidation(){
+        if(document.getElementById('aadharError').style.visibility=='visible'){
+          document.getElementById('aadharError').style.visibility='hidden';
+          console.log("got inside");
+        }
+        var flaglen=1;
+        var inputaadhar=document.getElementById('aadharNo').value;
+        if(inputaadhar.length==12){
+          flaglen=0;
+          }
+        if(flaglen){
+          document.getElementById('aadharError').style.visibility='visible';
+        }
+      }
+    </script>
+    <style>
+      html,
+      body {
+        min-height: 100%;
+      }
+      body,
+      div,
+      form,
+      input,
+      select,
+      p {
+        padding: 0;
+        margin: 0;
+        outline: none;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 14px;
+        color: #666;
+        line-height: 22px;
+      }
+      body {
+        background-image: url("./images/gr-bg.jpg");
+        border-right: 10px solid transparent;
+        background-repeat: no-repeat;
+        background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        background-position: center center;
+      }
+      h1 {
+        margin: 15px 0;
+        font-weight: 400;
+      }
+      .testbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: inherit;
+        padding: 3px;
+      }
+      form {
+        width: 100%;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px #ccc;
+      }
+      input,
+      select,
+      textarea {
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+      input:hover,
+      select:hover,
+      textarea:hover {
+        outline: none;
+        border: 1px solid #095484;
+      }
+      input {
+        width: calc(100% - 10px);
+        padding: 5px;
+      }
+      select {
+        width: 100%;
+        padding: 7px 0;
+        background: transparent;
+      }
+      textarea {
+        width: calc(100% - 6px);
+      }
+      .item {
+        position: relative;
+        margin: 10px 0;
+      }
+      input[type="date"]::-webkit-inner-spin-button {
+        display: none;
+      }
+      .item i,
+      input[type="date"]::-webkit-calendar-picker-indicator {
+        position: absolute;
+        font-size: 20px;
+        color: #a9a9a9;
+      }
+      .item i {
+        right: 2%;
+        top: 30px;
+        z-index: 1;
+      }
+      [type="date"]::-webkit-calendar-picker-indicator {
+        right: 1%;
+        z-index: 2;
+        opacity: 0;
+        cursor: pointer;
+      }
+      .btn-block {
+        margin-top: 20px;
+        text-align: center;
+      }
+      button {
+        width: 150px;
+        padding: 10px;
+        border: none;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        background-color: #095484;
+        font-size: 16px;
+        color: #fff;
+        cursor: pointer;
+      }
+      
+      #aadharError{
+        color: #ff0000;
+      }
+      button:hover {
+        background-color: #0666a3;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="float: left; width: 50%" class="testbox">
+      <form action="/">
+        <h1>Complaint Form</h1>
+        <div class="item">
+          <p>Your name</p>
+          <div>
+            <input type="text" name="name" placeholder="First" />
+            <input type="text" name="name" placeholder="Last" />
+          </div>
+        </div>
+        <div class="item">
+          <p>Your Aadhar Number</p><p id="aadharError" style="visibility:hidden">Aadhar number must be on length 12*</p>
+          <input type="number" name="name" id="aadharNo" />
+        </div>
+        <div class="item">
+          <p>Your email</p>
+          <input type="email" name="name" />
+        </div>
+        <div class="item">
+          <p>Date of facing the issue</p>
+          <input type="date" name="name" required />
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <div class="item">
+          <p>Select the concerned department you want to address</p>
+          <select>
+            <option value="">*Please select*</option>
+            <option value="A">Department of Economic Affairs</option>
+            <option value="B">Department of Expenditure</option>
+            <option value="C">Department of Revenue</option>
+            <option value="D">Department of Financial Services</option>
+            <option value="E">
+              Department of Investment and Public Asset Management
+            </option>
+          </select>
+        </div>
+        <div class="item">
+          <p>Select your grievance type</p>
+          <select>
+            <option value="">*Please select*</option>
+            <option value="indi">Individual</option>
+            <option value="collec">Collective</option>
+          </select>
+        </div>
+        <!--
+        <div class="item">
+          <p>Office manager name</p>
+          <input type="text" name="name"/>
+        </div>-->
+        <div class="item">
+          <p>Problem Description</p>
+          <textarea rows="5"></textarea>
+        </div>
+        <div class="item">
+          <p>
+            Note all relevant places, events, etc. pertaining to the complaint
+          </p>
+          <textarea rows="5"></textarea>
+        </div>
+        <div class="item">
+          <p>Any other suggestions</p>
+          <textarea rows="5"></textarea>
+        </div>
+
+        <div class="btn-block">
+          <button type="button" href="/" onclick="vallidation()">Send</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
