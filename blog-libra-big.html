@@ -1,6 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
+    
+    <meta charset="UTF-8" />
+
+    <!-- this line will appear only if the website is visited with an iPad -->
+    <meta name="viewport" content="width=100%, initial-scale=1.0, maximum-scale=1.2, user-scalable=yes" />
+
+
+
+    <title>Aapki Awaaz | We hear you</title>
+
+    <!-- RESET STYLESHEET -->
+    <link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+    <!-- BOOTSTRAP STYLESHEET -->
+    <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.css" />
+    <!-- MAIN THEME STYLESHEET -->
+    <link rel="stylesheet" type="text/css" media="all" href="style.css" />
+
+    <!-- [favicon] begin -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!-- [favicon] end -->
+
+    <!-- Touch icons more info: http://mathiasbynens.be/notes/touch-icons -->
+    <!-- For iPad3 with retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x.png" />
+    <!-- For first- and second-generation iPad: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x.png" />
+    <!-- For first- and second-generation iPad: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x.png">
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57x.png" />
+    <link rel='stylesheet' id='thickbox-css'  href='js/thickbox/thickbox.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='usquare-css-css'  href='sliders/usquare/css/frontend/usquare_style.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='google-fonts-css'  href='http://fonts.googleapis.com/css?family=Playfair+Display%7COpen+Sans+Condensed%3A300%7COpen+Sans%7CShadows+Into+Light%7CMuli%7CDroid+Sans%7CArbutus+Slab%7CAbel&#038;ver=3.5.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='responsive-css'  href='css/responsive.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='polaroid-slider-css'  href='sliders/polaroid/css/polaroid.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='ahortcodes-css'  href='css/shortcodes.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='contact-form-css'  href='css/contact_form.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='custom-css'  href='css/custom.css' type='text/css' media='all' />
+
+    <style type="text/css">
+            body { background-color: #ffffff; background-image: url('images/bg-pattern.png'); background-repeat: repeat; background-position: top left; background-attachment: scroll; }
+    </style>
+
+    <script type='text/javascript' src='js/jquery/jquery.js'></script>
+    
     <title>Grievance Readdressal Form</title>
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
@@ -47,8 +93,8 @@
         color: #666;
         line-height: 22px;
       }
-      body {
-        background-image: url("./images/gr-bg.jpg");
+     body {
+        /*background-image: url("./images/gr-bg.jpg");*/
         border-right: 10px solid transparent;
         background-repeat: no-repeat;
         background-size: cover;
@@ -57,6 +103,7 @@
         -o-background-size: cover;
         -ms-background-size: cover;
         background-position: center center;
+        width:100%
       }
       h1 {
         margin: 15px 0;
@@ -68,9 +115,9 @@
         align-items: center;
         height: inherit;
         padding: 3px;
-      }
+      } 
       form {
-        width: 100%;
+        width: 75%;
         padding: 20px;
         background: #fff;
         box-shadow: 0 2px 5px #ccc;
@@ -150,7 +197,252 @@
     </style>
   </head>
   <body>
-    <div style="float: left; width: 50%" class="testbox">
+
+
+
+<!-- START BG SHADOW -->
+<div class="bg-shadow">
+
+  <!-- START WRAPPER -->
+      <div id="wrapper" class="container group">
+  
+          <!-- START TOP BAR -->
+          <div id="topbar">
+              <div class="container">
+                  <div class="row">
+                      <div id="nav" class="span12 light">
+  
+                          <!-- START MAIN NAVIGATION -->
+  
+                          <ul id="menu-menu" class="level-1">
+                              <li>
+                                  <a href="index.html">HOME</a>
+                                  
+                              </li>
+                              <!--
+                              <li>
+                                  <a href="#">SLIDERS</a>
+                                  <ul class="sub-menu">
+                                      <li><a href="revolution-slider.html">Revolution Slider</a></li>
+                                      <li><a href="flexslider-classic.html">Flexslider Classic</a></li>
+                                      <li><a href="flexslider-elegant.html">Flexslider Elegant</a></li>
+                                      <li><a href="elastic.html">Elastic</a></li>
+                                      <li><a href="flash.html">Flash</a></li>
+                                      <li><a href="rotating.html">Rotating</a></li>
+                                      <li><a href="thumbnails.html">Thumbnails</a></li>
+                                      <li><a href="usquare.html">Usquare</a></li>
+                                      <li><a href="polaroid.html">Polaroid</a></li>
+                                  </ul>
+                              </li>
+  
+                              <li>
+                                  <a href="#">FEATURES</a>
+                                  <ul class="sub-menu">
+                                      <li><a href="services-module.html">Services Module</a></li>
+                                      <li><a href="blog-modules.html">Blog modules</a></li>
+                                      <li><a href="portfolio-and-video-modules.html">Portfolio and video modules</a></li>
+                                      <li><a href="libra-features.html">Libra features</a></li>
+                                  </ul>
+                              </li>
+                          -->
+                              <li>
+                                  <a href="#">OFFICER'S CONTACT</a>
+                                  <ul class="sub-menu">
+                                      <li><a href="portfolio-libra.html">Head of District Administration(Collector)</a></li>
+                                      <li><a href="portfolio-pinterest.html">Head of Zilla Parishad</a></li>
+                                      <li><a href="portfolio-slide-detail.html">Head of Municipal Corporation</a></li>
+                                      <li><a href="portfolio-filterable.html">Head of Police Administration</a></li>
+                                      <li><a href="portfolio-2-columns.html">Mantralaya Departments</a></li>
+                                      
+                                  </ul>
+                              </li>
+                              <li>
+                                  <a href="#">SERVICES</a>
+                                  <ul class="sub-menu">
+                                      <li>
+                              
+                                          <a href="#">Grievance</a>
+                                          <ul class="sub-menu">
+                                              <li><a href="register.html">Lodge a complaint</a></li>
+                                              <li><a href="register.html">Track your application status</a></li>
+                                              
+                                             
+                                          </ul>
+                                      </li>
+                                      <li>
+                                          <a href="pages-faq.html">FAQ</a>
+                                      </li>
+                                      <li>
+                                          <a href="#">Feedback</a>
+                                          
+                                      </li>
+                                      
+                                  </ul>
+                              </li>
+                              <li>
+                                  <a href="#">ABOUT US</a>
+                                  <ul class="sub-menu">
+                                      <li><a href="shortcodes-alert-box-buttons.html">Vission</a></li>
+                                      <li><a href="shortcodes-charts.html">Mission</a></li>
+                                  
+                                  </ul>
+                              </li>
+  
+                              <li>
+                                  <a href="index.html">HELPLINE</a>
+                                  
+                              </li>
+                              <!--
+                              <li>
+                                  <a href="#">CONTACT</a>
+                                  <ul class="sub-menu">
+                                      <li><a href="get-in-touch.html">With MAP</a></li>
+                                      <li><a href="get-in-touch-2.html">Without MAP</a></li>
+                                  </ul>
+                              </li>
+                          -->
+                          </ul>
+                          <!-- END MAIN NAVIGATION -->
+  
+                          <!-- START TOPBAR LOGIN -->
+  
+                          <div id="topbar_login" class="not_logged_in">
+  
+                              <a class="topbar_login" href="#">
+                                  Login <span class="sf-sub-indicator"></span>
+                              </a>
+  
+                              <div id="fast-login" class="access-info-box">
+                                  <form action="elastic.html" method="post" name="loginform">
+  
+                                      <div class="form">
+                                          <p>
+                                              <label>
+                                                  Username<br/>
+                                                  <input type="text" tabindex="10" size="20" value="" name="log" class="input-text" />
+                                              </label>
+                                          </p>
+  
+                                          <p>
+                                              <label>
+                                                  Password<br/>
+                                                  <input type="password" tabindex="20" size="20" value="" name="pwd" class="input-text" />
+                                              </label>
+                                          </p>
+  
+                                          <a class="align-left lostpassword" href="register.html" title="Registration">
+                                              dont have an account?
+                                          </a>
+  
+                                          <p class="align-right">
+                                              <input type="submit" tabindex="100" value="Login" name="wp-submit" class="input-submit"  />
+                                              <input type="hidden" value="index.html" name="redirect_to" />
+                                              <input type="hidden" value="1" name="testcookie" />
+                                          </p>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+                          <!-- END TOPBAR LOGIN -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+           <!-- END TOP BAR -->
+  
+      <!-- START HEADER -->
+      <div id="header" class="group margin-bottom">
+  
+          <div class="group container">
+              <div class="row" id="logo-headersidebar-container">
+                  <!-- START LOGO -->
+                  <div id="logo" class="span6 group">
+                      <a id="logo-img" href="index.html" title="Aapki Awaaz"> 
+                          <img src="images/libra-logo1.png" title="Aapki Awaaz" alt="Aapki Awaaz" />
+                      </a>
+                      <p id='tagline'>We hear you</p>
+                  </div>
+                  <!-- END LOGO -->
+                      
+                  <!-- START HEADER SIDEBAR -->
+                  <div id="header-sidebar" class="span6 group">
+                      <div class="widget-first widget header-text-image">
+                          <div class="text-image" style="text-align:left">
+                              <img src="images/phone1.png" alt="CUSTOMER SUPPORT" />
+                          </div>
+  
+                          <div class="text-content">
+                              <h3>CUSTOMER SUPPORT</h3>
+                              <p>011-23345545</p>
+                          </div>
+                      </div>
+  
+                      <div class="widget-last widget widget_text">
+                          <div class="textwidget">
+                              <div class="socials-default-small facebook-small default">
+                                  <a href="https://www.facebook.com/DARPGIndia/" class="socials-default-small default facebook" >facebook</a>
+                              </div>
+  
+                             
+  
+                              <div class="socials-default-small twitter-small default">
+                                  <a href="https://twitter.com/DARPG_GoI?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="socials-default-small default twitter" >twitter</a>
+                              </div>
+  
+                              
+  
+                              </div>
+                           </div>
+  
+                      </div>
+                  </div>
+              </div>
+          </div>
+  
+      <!-- END HEADER -->
+  
+  
+      <div class="wrapper-border"></div>
+  
+      </div>
+  <!-- END WRAPPER -->
+  
+  </div>
+  <!-- END BG SHADOW -->
+  
+  <script type='text/javascript' src='js/comment-reply.min.js'></script>
+  <script type='text/javascript' src='js/underscore.min.js'></script>
+  <script type='text/javascript' src='js/jquery/jquery.masonry.min.js'></script>
+  <script type='text/javascript' src='sliders/polaroid/js/jquery.polaroid.js'></script>
+  <script type='text/javascript' src='js/jquery.colorbox-min.js'></script>
+  <script type='text/javascript' src='js/jquery.easing.js'></script>
+  <script type='text/javascript' src='js/jquery.carouFredSel-6.1.0-packed.js'></script>
+  <script type='text/javascript' src='js/jQuery.BlackAndWhite.js'></script>
+  <script type='text/javascript' src='js/jquery.touchSwipe.min.js'></script>
+  <script type='text/javascript' src='sliders/polaroid/js/jquery.transform-0.8.0.min.js'></script>
+  <script type='text/javascript' src='sliders/polaroid/js/jquery.preloader.js'></script>
+  <script type='text/javascript' src='js/responsive.js'></script>
+  <script type='text/javascript' src='js/mobilemenu.js'></script>
+  <script type='text/javascript' src='js/jquery.superfish.js'></script>
+  <script type='text/javascript' src='js/jquery.placeholder.js'></script>
+  <script type='text/javascript' src='js/contact.js'></script>
+  <script type='text/javascript' src='js/jquery.tipsy.js'></script>
+  <script type='text/javascript' src='js/jquery.cycle.min.js'></script>
+  <script type='text/javascript' src='js/shortcodes.js'></script>
+  <script type='text/javascript' src='js/jquery.custom.js'></script>
+  
+
+
+
+
+
+
+
+
+
+
+  </ul>
+    <div style="float: left;width: 100%" class="testbox">
       <form action="/">
         <h1>Complaint Form</h1>
         <div class="item">
