@@ -11,21 +11,21 @@ NodeJS, React, HTML, CSS, MySQL and PHP.
 The application has sperate views for admin, employee and user:
 
 # Admin
-Admin Dashboard - 
+### Admin Dashboard - 
 ![](images/admin_dash.png)
-Admin can manage the emloyees and user info in the system.
+### Admin can manage the emloyees and user info in the system.
 ![](images/admin_view.png)
 
 # Employee
-Employee Dashboard -
+### Employee Dashboard -
 ![](images/emp_dash.png)
-Employee can change the status of the grievance when its addressed.
+### Employee can change the status of the grievance when its addressed.
 ![](images/emp_view.png)
 
 # User
-User Dashboard -
+### User Dashboard -
 ![](images/user_dash.png)
-User can view detailed information of the grievances submitted by them.
+### User can view detailed information of the grievances submitted by them.
 ![](images/user_view.png)
 
 # Reports Generated
