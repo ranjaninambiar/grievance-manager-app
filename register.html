@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Register</title>
+    <!--sakthi add from here -->
+    <style>
+      #message {
+        display: none;
+        background: #f1f1f1;
+        color: #000;
+        position: relative;
+        padding: 20px;
+        margin-top: 10px;
+      } 
+
+      #message p {
+        padding: 10px 35px;
+        font-size: 12px;
+        font: normal;
+      }
+
+      /* Add a green text color and a checkmark when the requirements are right */
+      .valid {
+        color: green;
+      }
+
+      .valid:before {
+        position: relative;
+        left: -35px;
+        content: "✔";
+      }
+
+      /* Add a red text color and an "x" when the requirements are wrong */
+      .invalid {
+        color: red;
+      }
+
+      .invalid:before {
+        position: relative;
+        left: -35px;
+        content: "✖";
+      }
+    </style>
+    <!-- Font Icon -->
+    <link
+      rel="stylesheet"
+      href="fonts/material-icon/css/material-design-iconic-font.min.css"
+    />
+    <!-- to here (sakthi)-->
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+      function vallidation(){
+        if(document.getElementById('aadharError').style.visibility=='visible'){
+          document.getElementById('aadharError').style.visibility='hidden';
+          console.log("got inside");
+        }
+        var flaglen=1;
+        var inputaadhar=document.getElementById('aadharNo').value;
+        if(inputaadhar.length==12){
+          flaglen=0;
+          }
+        if(flaglen){
+          document.getElementById('aadharError').style.visibility='visible';}
+
+        if(document.getElementById('phoneError').style.visibility=='visible'){
+          document.getElementById('phoneError').style.visibility='hidden';
+          console.log("got inside");
+        }
+        var flagnumber=1;
+        var inputphone=document.getElementById('phone_number').value;
+        if(inputphone.length==10){
+          flagnumber=0;
+          }
+        if(flagnumber){
+          document.getElementById('phoneError').style.visibility='visible';
+        }
+        if(document.getElementById('matchError').style.visibility=='visible'){
+          document.getElementById('matchError').style.visibility='hidden';
+          console.log("got inside");
+        }
+        var flagmat=1;
+        var pass1=document.getElementById('password').value;
+        var pass2=document.getElementById('password2').value;
+        if(pass1==pass2){
+          flagmat=0;
+          }
+        if(flagmat){
+          document.getElementById('matchError').style.visibility='visible';
+        }
+        } 
+  </script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <form method="POST" action='http://localhost:3000/grievanceapp-master/register.html' class="appointment-form" id="appointment-form">
+          <h2>Register yourself first!</h2>
+          <div class="form-group-1">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Your name"
+              required
+            />
+
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="number"
+              name="phone_number"
+              id="phone_number"
+              placeholder="Phone number"
+              required
+            /><p id="phoneError" style="visibility:hidden">Phone number must be on length 10*</p>
+            <input
+              type="text"
+              name="state"
+              id="state"
+              placeholder="State"
+              required
+            />
+            <input
+              type="text"
+              name="city"
+              id="city"
+              placeholder="City"
+              required
+            />
+            <input
+              type="number"
+              name="aadhar"
+              id="aadhar"
+              placeholder="Enter your  aadhar no"
+              required
+            /><p id="aadharError" style="visibility:hidden">Aadhar number must be on length 12*</p>
+            <input
+              placeholder="Enter your dob"
+              class="textbox-n"
+              type="text"
+              onfocus="(this.type='date')"
+              id="date"
+              required
+            />
+            <input
+              type="text"
+              name="uname"
+              id="uname"
+              placeholder="Create your username"
+              required
+            />
+            <input
+              type="text"
+              name="password"
+              id="password"
+              placeholder="Create your password"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+              required
+            />
+            <input
+              type="text"
+              name="password2"
+              id="password2"
+              placeholder="Confirm your password"
+              required
+            /><p id="matchError" style="visibility:hidden">Both passwords dont match*</p>
+            <!-- dont edit this password field-->
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              name="agree-term"
+              id="agree-term"
+              class="agree-term"
+            />
+            <label for="agree-term" class="label-agree-term"
+              ><span><span></span></span>I agree to the
+              <a href="#" class="term-service">Terms and Conditions</a></label>
+          </div>
+          <div class="form-submit">
+            <input
+              type="submit"
+              name="submit"
+              id="submit"
+              class="submit"
+              value="Register"
+            />
+          </div>
+        </form>
+        <p class="lead mt-4" style="color: black">
+          Have An Account? <a href="login.html">Login</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <!-- dont edit here-->
+    <div id="message">
+      <h3>Password must contain the following:</h3>
+      <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+      <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+      <p id="number" class="invalid">A <b>number</b></p>
+      <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+    </div>
+
+    <script>
+      var myInput = document.getElementById("password");
+      var letter = document.getElementById("letter");
+      var capital = document.getElementById("capital");
+      var number = document.getElementById("number");
+      var length = document.getElementById("length");
+
+      // When the user clicks on the password field, show the message box
+      myInput.onfocus = function () {
+        document.getElementById("message").style.display = "block";
+      };
+
+      // When the user clicks outside of the password field, hide the message box
+      myInput.onblur = function () {
+        document.getElementById("message").style.display = "none";
+      };
+
+      // When the user starts to type something inside the password field
+      myInput.onkeyup = function () {
+        // Validate lowercase letters
+        var lowerCaseLetters = /[a-z]/g;
+        if (myInput.value.match(lowerCaseLetters)) {
+          letter.classList.remove("invalid");
+          letter.classList.add("valid");
+        } else {
+          letter.classList.remove("valid");
+          letter.classList.add("invalid");
+        }
+
+        // Validate capital letters
+        var upperCaseLetters = /[A-Z]/g;
+        if (myInput.value.match(upperCaseLetters)) {
+          capital.classList.remove("invalid");
+          capital.classList.add("valid");
+        } else {
+          capital.classList.remove("valid");
+          capital.classList.add("invalid");
+        }
+
+        // Validate numbers
+        var numbers = /[0-9]/g;
+        if (myInput.value.match(numbers)) {
+          number.classList.remove("invalid");
+          number.classList.add("valid");
+        } else {
+          number.classList.remove("valid");
+          number.classList.add("invalid");
+        }
+
+        // Validate length
+        if (myInput.value.length >= 8) {
+          length.classList.remove("invalid");
+          length.classList.add("valid");
+        } else {
+          length.classList.remove("valid");
+          length.classList.add("invalid");
+        }
+      };
+    </script>
+    <!-- dont edit till here-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+  <!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

@@ -1,0 +1,30 @@
+<!--====form section start====-->
+<a href="/emp-list"><Button>Go Back</Button></a>
+<div class="user-detail">
+   
+    <form action="<%=(typeof editData!='undefined')?'/editss/'+editData.username:'/employee/create'%>" method="POST">
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter Full Name" name="name" required value="<%=(typeof editData!='undefined')? editData.name:''%>">
+    </br></br>
+          <label>Email Address</label>
+          <input type="email" placeholder="Enter Email Address" name="email" required value="<%=(typeof editData!='undefined')? editData.email:''%>">
+        </br></br>
+          <label>State</label>
+          <input type="text" placeholder="Enter Full State" name="state" required value="<%=(typeof editData!='undefined')? editData.state:''%>">
+        </br></br>
+          <label>City</label>
+          <input type="text" placeholder="Enter Full City" name="city" required value="<%=(typeof editData!='undefined')? editData.city:''%>">
+        </br></br>
+          <label>Date-Of-Birth</label>
+          <input type="date" placeholder="Enter DOB" name="dob" required value="<%=(typeof editData!='undefined')? editData.dob:''%>">
+        </br></br>
+          <label>Aadhar number</label>
+          <input type="text" placeholder="Enter Aadhar number" name="aadhar_no" required value="<%=(typeof editData!='undefined')? editData.aadhar_no:''%>">
+        </br></br>
+          <label>Count</label>
+          <input type="text" placeholder="Enter Count" name="count" required value="<%=(typeof editData!='undefined')? editData.count:''%>">
+        </br></br>
+          <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        </div>
+</div>
+<!--====form section start====--><code></code>

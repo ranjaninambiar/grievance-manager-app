@@ -1,0 +1,11 @@
+grievance_id,grievance_type,received_date,dep_name,status
+1,collective,09-05-17,Department of Revenue,pending
+2,individual,12-02-18,Department of Economic Affairs,received
+3,collective,22-10-19,Department of Financial Services,received
+4,collective,12-06-19,Department of Financial Services,pending
+5,collective,28-05-19,Department of Revenue,pending
+6,collective,28-05-20,Department of Expenditure,received
+7,individual,08-12-18,Department of Investment and Public Asset Management,pending
+8,individual,02-10-19,Department of Economic Affairs,pending
+9,individual,20-01-20,Department of Expenditure,received
+10,collective,12-02-20,Department of Economic Affairs,pending

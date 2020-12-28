@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fetch using MySQL and Node.js</title>
+  <style> 
+    table, td, th { 
+     border: 1px solid #ddd; 
+     text-align: left; 
+    } 
+    table { 
+     border-collapse: collapse; 
+     width: 50%; 
+    } 
+    .table-data{ 
+     position: relative; 
+     left:150px; 
+     top:100px; 
+    } 
+    th, td { 
+     padding: 15px; 
+    } 
+    </style>
+</head>
+<body>
+    <div class="user-detail">
+   
+        <form action="<%=(typeof editData!='undefined')?'/edits/'+editData.grievance_id:'/create'%>" method="POST">
+              <label>Grievance type</label>
+              <input type="text" placeholder="Enter Emp" name="grievance_type" required value="<%=(typeof editData!='undefined')? editData.grievance_type:''%>">
+              <label>Department Name</label>
+              <input type="text" placeholder="Enter Department Name" name="dep_name" required value="<%=(typeof editData!='undefined')? editData.dep_name:''%>">
+        
+              <button type="submit">Submit</button>
+            </div> 
+      </div>
+</body>
+</html>

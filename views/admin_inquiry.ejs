@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstraps/4.3.1/js/bootstrap.min.js:"></script>
+</head>
+<style>
+    div{
+        margin-left: 20px;
+        color:navy;
+        width: 360px;;
+        background-color: oldlace;
+    }
+    input { 
+  box-sizing: border-box;
+  border-bottom: 2px solid black;
+  border-radius: 4px;
+  margin-left: 20px;
+  
+}
+
+input[type=submit] {
+  width: 10%;
+  margin-left:590px;
+}
+.fonts{
+    margin-left:550px;
+
+}
+body{
+    background-image: url("common-bg.jpg");
+}
+</style>
+<body>
+    <a href="emp_view"><Button>Go Back</Button></a><br><br><br><br>
+    <h2><div><%= title %></div></h2>
+    <form id="loginBox" action="/admin_inquiry" method="POST">
+        <label for="grievance_id" class="fonts" >Grievance ID</label>
+        <input id="grievance_id" name="grievance_id" type="text"/><br><br>
+        <label for="emp_id"  class="fonts" >Employee ID</label> 
+        <input id="emp_id" name="emp_id" type="text"/><br><br>
+        <label for="dep_id" class="fonts">Department ID</label>
+        <input id="dep_id" name="dep_id" type="text"/><br><br>
+        <label for="date" class="fonts">Inquiry Sent Date</label>
+        <input id="date" name="date" type="date"/><br><br>
+        <input type="submit" name="submit"/>
+    
+    </form>
+    </body>
+    </html>

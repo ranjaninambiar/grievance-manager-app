@@ -1,0 +1,21 @@
+<!--====form section start====-->
+<div class="user-detail">
+   
+    <form action="<%=(typeof editData!='undefined')?'/users/edit/'+editData.username:'/users/create'%>" method="POST">
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter Full Name" name="name" required value="<%=(typeof editData!='undefined')? editData.name:''%>">
+          <label>Email Address</label>
+          <input type="email" placeholder="Enter Email Address" name="email" required value="<%=(typeof editData!='undefined')? editData.email:''%>">
+          <label>State</label>
+          <input type="text" placeholder="Enter Full State" name="state" required value="<%=(typeof editData!='undefined')? editData.state:''%>">
+          <label>City</label>
+          <input type="text" placeholder="Enter Full City" name="city" required value="<%=(typeof editData!='undefined')? editData.city:''%>">
+          <label>Date-Of-Birth</label>
+          <input type="date" placeholder="Enter DOB" name="dob" required value="<%=(typeof editData!='undefined')? editData.dob:''%>">
+          <label>Aadhar number</label>
+          <input type="text" placeholder="Enter Aadhar number" name="aadhar_no" required value="<%=(typeof editData!='undefined')? editData.aadhar_no:''%>">
+    
+          <button type="submit">Submit</button>
+        </div>
+</div>
+<!--====form section start====--><code></code>

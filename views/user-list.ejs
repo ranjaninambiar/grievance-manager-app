@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Users List</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstraps/4.3.1/js/bootstrap.min.js:"></script>
+</head>
+<body>
+    <a href="user_view"><Button>Go Back</Button></a>
+    <div class="table-data">
+<h2>Grievance List</h2>
+    <table class="table table-dark table-stripped">
+        <tr>
+            <th>S.N</th>
+            <th>Grievance ID</th>
+           <!--  <th>Username</th>
+            <th>Emp Id</th> -->
+            <th>Grievance Type</th>
+            <th>Recieved Date</th>
+            <th>Dep Name</th>
+            <th>Status</th>
+            <th>Edit</th>
+        </tr>
+        
+        <%
+        if(userData.length!=0){
+        var i=1;
+        userData.forEach(function(data){
+        %>
+        <tr>
+            <td><%=i; %></td>
+            <td><%=data.grievance_id %></td>
+    <!--    <td><%=data.username %></td>
+            <td><%=data.emp_id %></td>
+        -->
+            <td><%=data.grievance_type %></td>
+            <td><%=data.received_date %></td>
+            <td><%=data.dep_name %></td>
+            <td><%=data.status %></td>
+            <td><a href="/edits/<%=data.grievance_id%>">Edit</a></td>
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+    </div>
+</body>
+</html>

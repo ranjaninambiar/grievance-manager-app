@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="UTF-8" />
+
+    <!-- this line will appear only if the website is visited with an iPad -->
+    <meta name="viewport" content="width=100%, initial-scale=1.0, maximum-scale=1.2, user-scalable=yes" />
+
+
+
+    <title>Aapki Awaaz | We hear you</title>
+
+    <!-- RESET STYLESHEET -->
+    <link rel="stylesheet" type="text/css" media="all" href="/css/reset.css" />
+    <!-- BOOTSTRAP STYLESHEET -->
+    <link rel="stylesheet" type="text/css" media="all" href="/css/bootstrap.css" />
+    <!-- MAIN THEME STYLESHEET -->
+    <link rel="stylesheet" type="text/css" media="all" href="/style.css" />
+
+    <!-- [favicon] begin -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!-- [favicon] end -->
+
+    <!-- Touch icons more info: http://mathiasbynens.be/notes/touch-icons -->
+    <!-- For iPad3 with retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x.png" />
+    <!-- For first- and second-generation iPad: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x.png" />
+    <!-- For first- and second-generation iPad: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x.png">
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57x.png" />
+    <link rel='stylesheet' id='thickbox-css'  href='js/thickbox/thickbox.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='usquare-css-css'  href='sliders/usquare/css/frontend/usquare_style.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='google-fonts-css'  href='http://fonts.googleapis.com/css?family=Playfair+Display%7COpen+Sans+Condensed%3A300%7COpen+Sans%7CShadows+Into+Light%7CMuli%7CDroid+Sans%7CArbutus+Slab%7CAbel&#038;ver=3.5.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='responsive-css'  href='css/responsive.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='polaroid-slider-css'  href='sliders/polaroid/css/polaroid.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='ahortcodes-css'  href='css/shortcodes.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='contact-form-css'  href='css/contact_form.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='custom-css'  href='css/custom.css' type='text/css' media='all' />
+
+    <style type="text/css">
+            body { background-color: #ffffff; background-image: url('images/bg-pattern.png'); background-repeat: repeat; background-position: top left; background-attachment: scroll; }
+    </style>
+
+    <script type='text/javascript' src='/js/jquery/jquery.js'></script>
+    
+    <title>Grievance Readdressal Form</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script>
+      function vallidation(){
+        if(document.getElementById('aadharError').style.visibility=='visible'){
+          document.getElementById('aadharError').style.visibility='hidden';
+          console.log("got inside");
+        }
+        var flaglen=1;
+        var inputaadhar=document.getElementById('aadharNo').value;
+        if(inputaadhar.length==12){
+          flaglen=0;
+          }
+        if(flaglen){
+          document.getElementById('aadharError').style.visibility='visible';
+        }
+      }
+    </script>
+    <style>
+      html,
+      body {
+        min-height: 100%;
+      }
+      body,
+      div,
+      form,
+      input,
+      select,
+      p {
+        padding: 0;
+        margin: 0;
+        outline: none;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 14px;
+        color: #666;
+        line-height: 22px;
+      }
+     body {
+        background-image: url("./images/gr-bg.jpg");
+        border-right: 10px solid transparent;
+        background-repeat: no-repeat;
+        background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        background-position: center center;
+        width:100%
+      }
+      h1 {
+        margin: 15px 0;
+        font-weight: 400;
+      }
+      .testbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: inherit;
+        padding: 3px;
+      } 
+      form {
+        width: 75%;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px #ccc;
+      }
+      input,
+      select,
+      textarea {
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+      input:hover,
+      select:hover,
+      textarea:hover {
+        outline: none;
+        border: 1px solid #095484;
+      }
+      input {
+        width: calc(100% - 10px);
+        padding: 5px;
+      }
+      select {
+        width: 100%;
+        padding: 7px 0;
+        background: transparent;
+      }
+      textarea {
+        width: calc(100% - 6px);
+      }
+      .item {
+        position: relative;
+        margin: 10px 0;
+      }
+      input[type="date"]::-webkit-inner-spin-button {
+        display: none;
+      }
+      .item i,
+      input[type="date"]::-webkit-calendar-picker-indicator {
+        position: absolute;
+        font-size: 20px;
+        color: #a9a9a9;
+      }
+      .item i {
+        right: 2%;
+        top: 30px;
+        z-index: 1;
+      }
+      [type="date"]::-webkit-calendar-picker-indicator {
+        right: 1%;
+        z-index: 2;
+        opacity: 0;
+        cursor: pointer;
+      }
+      .btn-block {
+        margin-top: 20px;
+        text-align: center;
+      }
+      button {
+        width: 150px;
+        padding: 10px;
+        border: none;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        background-color: #095484;
+        font-size: 16px;
+        color: #fff;
+        cursor: pointer;
+      }
+      
+      #aadharError{
+        color: #ff0000;
+      }
+      button:hover {
+        background-color: #0666a3;
+      }
+    </style>
+  </head>
+  <body>
+
+
+    <a href="user_view"><Button>Go Back</Button></a>
+
+  <!-- END BG SHADOW -->
+  
+  <script type='text/javascript' src='js/comment-reply.min.js'></script>
+  <script type='text/javascript' src='js/underscore.min.js'></script>
+  <script type='text/javascript' src='js/jquery/jquery.masonry.min.js'></script>
+  <script type='text/javascript' src='sliders/polaroid/js/jquery.polaroid.js'></script>
+  <script type='text/javascript' src='js/jquery.colorbox-min.js'></script>
+  <script type='text/javascript' src='js/jquery.easing.js'></script>
+  <script type='text/javascript' src='js/jquery.carouFredSel-6.1.0-packed.js'></script>
+  <script type='text/javascript' src='js/jQuery.BlackAndWhite.js'></script>
+  <script type='text/javascript' src='js/jquery.touchSwipe.min.js'></script>
+  <script type='text/javascript' src='sliders/polaroid/js/jquery.transform-0.8.0.min.js'></script>
+  <script type='text/javascript' src='sliders/polaroid/js/jquery.preloader.js'></script>
+  <script type='text/javascript' src='js/responsive.js'></script>
+  <script type='text/javascript' src='js/mobilemenu.js'></script>
+  <script type='text/javascript' src='js/jquery.superfish.js'></script>
+  <script type='text/javascript' src='js/jquery.placeholder.js'></script>
+  <script type='text/javascript' src='js/contact.js'></script>
+  <script type='text/javascript' src='js/jquery.tipsy.js'></script>
+  <script type='text/javascript' src='js/jquery.cycle.min.js'></script>
+  <script type='text/javascript' src='js/shortcodes.js'></script>
+  <script type='text/javascript' src='js/jquery.custom.js'></script>
+  
+</ul>
+    <div style="float: left;width: 100%" class="loginBox">
+      <form action="/grievance" method="POST">
+        <h1>Complaint Form</h1>
+        <div class="item">
+          <p>Select the concerned department you want to address</p>
+          <select name="dep_name">
+            <option value="">Please select</option>
+            <option value="Department of Economic Affairs">Department of Economic Affairs</option>
+            <option value="Department of Expenditure">Department of Expenditure</option>
+            <option value="Department of Revenue">Department of Revenue</option>
+            <option value="Department of Financial Services">Department of Financial Services</option>
+            <option value="Department of Investment and Public Asset Management">
+              Department of Investment and Public Asset Management
+            </option>
+          </select>
+        </div>
+        <div class="item" >
+          <p>Select your grievance type</p>
+          <select name="grievance_type">
+            <option value="">Please select</option>
+            <option value="Individual">Individual</option>
+            <option value="Collective">Collective</option>
+          </select>
+        </div>
+        <div>
+          <p>Date</p>
+          <input type="date" name="received_date" />
+        </div>
+        <div class="item">
+          <p>Problem Description</p>
+          <textarea rows="5"></textarea>
+        </div>
+        <div class="item">
+          <p>
+            Note all relevant places, events, etc. pertaining to the complaint
+          </p>
+          <textarea rows="5"></textarea>
+        </div>
+        <div class="item">
+          <p>Any other suggestions</p>
+          <textarea rows="5"></textarea>
+        </div>
+
+        <div class="btn-block">
+          <button type="submit" onclick="vallidation()">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
